@@ -33,4 +33,13 @@ router.put('/update-fines', async (req, res) => {
   }
 });
 
+router.get('/get',async(req,res)=>{
+  try{
+    const data=await Book.find()
+    res.json(data)
+  }
+  catch(error)
+  {res.status(500).json({message: 'Some error occured'})}
+})
+
 module.exports = router;

@@ -5,7 +5,7 @@ const bookRoutes = require('./route');
 
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/library', {
+mongoose.connect('mongodb://localhost:27017/karabi', {
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
